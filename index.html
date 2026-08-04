@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SHIFT AI フォローアップ会の目的、質問方法、Google Meetの画面共有・マイク設定をまとめた参加ガイドです。">
+  <meta name="theme-color" content="#a51e6d">
+  <title>フォローアップ会 参加ガイド | SHIFT AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#a51e6d",
+            "primary-mid": "#c06299",
+            "primary-light": "#dba5c5",
+            "primary-lightest": "#f6e9f0",
+            secondary: "#039578",
+            "secondary-mid": "#4fb5a1",
+            "secondary-light": "#e6f4f2",
+            accent: "#ff5757",
+            violet: "#8c52ff"
+          },
+          fontFamily: {
+            sans: ['"Noto Sans JP"', "system-ui", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    :root { color-scheme: light; }
+    body { color: #333333; }
+    .shift-ai-gradient { background: linear-gradient(to right, #ff5757, #8c52ff); }
+    .material-icons-outlined { font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24; }
+    .step-line::before {
+      content: "";
+      position: absolute;
+      top: 2.65rem;
+      bottom: -1.5rem;
+      left: 1.25rem;
+      width: 2px;
+      background: #dba5c5;
+    }
+    .step-line:last-child::before { display: none; }
+    .focus-ring:focus-visible { outline: 3px solid #039578; outline-offset: 3px; }
+    @media print {
+      nav { position: static !important; }
+      .no-print { display: none !important; }
+      section { break-inside: avoid; }
+      body { background: white !important; }
+    }
+  </style>
+</head>
+<body class="bg-white font-sans antialiased">
+  <header>
+    <div class="shift-ai-gradient px-5 py-3 text-white">
+      <div class="mx-auto flex max-w-5xl items-center justify-between gap-4">
+        <span class="text-sm font-bold tracking-wide">フォローアップ会 参加ガイド</span>
+        <span class="text-xs tracking-wider text-white/90">SHIFT AI / Shift to AI era.</span>
+      </div>
+    </div>
+    <nav class="sticky top-0 z-50 border-b border-gray-100 bg-white/95 shadow-sm backdrop-blur-md" aria-label="ページ内ナビゲーション">
+      <div class="mx-auto flex max-w-5xl items-center justify-between px-5 py-3">
+        <a href="#top" class="focus-ring flex items-center gap-2 rounded-md font-bold text-primary" aria-label="ページ上部へ戻る">
+          <span class="material-icons-outlined" aria-hidden="true">support_agent</span>
+          <span>参加前に確認</span>
+        </a>
+        <div class="hidden items-center gap-5 text-sm font-medium text-gray-600 sm:flex">
+          <a class="focus-ring rounded px-1 py-1 hover:text-primary" href="#about">会の目的</a>
+          <a class="focus-ring rounded px-1 py-1 hover:text-primary" href="#screen-share">画面共有</a>
+          <a class="focus-ring rounded px-1 py-1 hover:text-primary" href="#microphone">マイク</a>
+          <a class="focus-ring rounded px-1 py-1 hover:text-primary" href="#question">質問方法</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="shift-ai-gradient px-5 py-14 text-white sm:py-20">
+      <div class="mx-auto max-w-5xl">
+        <div class="max-w-3xl">
+          <p class="mb-4 inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-2 text-sm font-bold text-white">
+            <span class="material-icons-outlined text-lg" aria-hidden="true">handshake</span>
+            少人数サポート
+          </p>
+          <h1 class="text-3xl font-bold leading-tight sm:text-5xl sm:leading-tight">初期設定の「ここで止まった」を<br class="hidden sm:block">その場で一緒に解消します</h1>
+          <p class="mt-6 max-w-2xl text-base leading-8 text-white/90 sm:text-lg">Claude Codeのセットアップや配布スキルの導入など、最初のつまずきを解消するためのフォローアップ会です。</p>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 items-stretch gap-3 md:grid-cols-[1fr_auto_1fr_auto_1fr]">
+          <div class="rounded-2xl bg-white p-5 text-[#333333] shadow-lg">
+            <span class="material-icons-outlined text-3xl text-primary" aria-hidden="true">screen_share</span>
+            <h2 class="mt-2 font-bold">当日までに動作確認</h2>
+            <p class="mt-1 text-sm leading-6 text-gray-600">画面共有できるか一度テスト</p>
+          </div>
+          <span class="material-icons-outlined hidden self-center text-3xl text-white md:block" aria-hidden="true">arrow_forward</span>
+          <div class="rounded-2xl bg-white p-5 text-[#333333] shadow-lg">
+            <span class="material-icons-outlined text-3xl text-primary" aria-hidden="true">screen_share</span>
+            <h2 class="mt-2 font-bold">画面を見ながら確認</h2>
+            <p class="mt-1 text-sm leading-6 text-gray-600">現在の状態を画面共有</p>
+          </div>
+          <span class="material-icons-outlined hidden self-center text-3xl text-white md:block" aria-hidden="true">arrow_forward</span>
+          <div class="rounded-2xl bg-primary p-5 text-white shadow-lg">
+            <span class="material-icons-outlined text-3xl" aria-hidden="true">task_alt</span>
+            <h2 class="mt-2 font-bold">次の一歩へ進む</h2>
+            <p class="mt-1 text-sm leading-6 text-white/90">設定を整え、学習を再開</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="scroll-mt-20 px-5 py-14 sm:py-20">
+      <div class="mx-auto max-w-5xl">
+        <div class="text-center">
+          <p class="text-sm font-bold tracking-widest text-primary">ABOUT</p>
+          <h2 class="mt-2 text-2xl font-bold sm:text-3xl">この会でサポートすること</h2>
+          <p class="mx-auto mt-4 max-w-2xl leading-7 text-gray-600">フォローアップ会は、初期設定を終えて学習をスタートできる状態をつくるための場です。</p>
+        </div>
+
+        <figure class="mt-10 overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm">
+          <img src="assets/overview.png" alt="フォローアップサポート会。Claude Codeのセットアップをサポートします" width="1774" height="887" class="h-auto w-full" decoding="async">
+          <figcaption class="border-t border-gray-100 px-5 py-3 text-center text-xs leading-6 text-gray-500">フォローアップ会のご案内</figcaption>
+        </figure>
+
+        <div class="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
+          <article class="rounded-2xl border-2 border-primary bg-primary-lightest p-6">
+            <div class="flex items-start gap-4">
+              <span class="material-icons-outlined rounded-xl bg-primary p-3 text-2xl text-white" aria-hidden="true">check_circle</span>
+              <div>
+                <h3 class="text-lg font-bold">フォローアップ会で扱うこと</h3>
+                <ul class="mt-4 space-y-3 text-sm leading-6">
+                  <li class="flex gap-2"><span class="material-icons-outlined mt-0.5 text-lg text-primary" aria-hidden="true">done</span><span>Claude Codeのセットアップ</span></li>
+                  <li class="flex gap-2"><span class="material-icons-outlined mt-0.5 text-lg text-primary" aria-hidden="true">done</span><span>配布スキルの導入</span></li>
+                  <li class="flex gap-2"><span class="material-icons-outlined mt-0.5 text-lg text-primary" aria-hidden="true">done</span><span>初期設定で止まっている箇所の確認</span></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="rounded-2xl border border-gray-300 bg-gray-100 p-6">
+            <div class="flex items-start gap-4">
+              <span class="material-icons-outlined rounded-xl bg-[#333333] p-3 text-2xl text-white" aria-hidden="true">event_repeat</span>
+              <div>
+                <h3 class="text-lg font-bold">毎週の技術的な質問</h3>
+                <p class="mt-4 text-sm leading-7 text-gray-700">課題を進める中で生まれた技術的な質問や、応用的な相談は、毎週のフィードバック会をご利用ください。</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="mt-6 flex items-start gap-3 rounded-2xl border-l-4 border-secondary bg-secondary-light p-5">
+          <span class="material-icons-outlined mt-0.5 text-secondary" aria-hidden="true">priority_high</span>
+          <p class="text-sm font-medium leading-7"><strong>事前に届いた質問を優先して回答します。</strong>当日の質問は、時間や内容によって回答できない場合があります。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="screen-share" class="scroll-mt-20 bg-secondary-light px-5 py-14 sm:py-20">
+      <div class="mx-auto max-w-5xl">
+        <span class="inline-block rounded-full bg-primary px-4 py-1 text-sm font-bold text-white">STEP 1</span>
+        <h2 class="mt-4 text-2xl font-bold sm:text-3xl">当日までに画面共有をテスト</h2>
+        <p class="mt-3 max-w-2xl leading-7 text-gray-600">当日すぐにサポートを始められるよう、事前にGoogle Meetを開き、共有したいウィンドウまたは画面全体を共有できるところまで一度確認してください。</p>
+
+        <div class="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+          <div class="space-y-6">
+            <div class="step-line relative flex gap-4 pb-1">
+              <span class="relative z-10 flex h-10 w-10 flex-none items-center justify-center rounded-full bg-primary font-bold text-white">1</span>
+              <div class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+                <h3 class="font-bold">「画面を共有」アイコンを押す</h3>
+                <p class="mt-2 text-sm leading-7 text-gray-600">Meet画面下部の、四角に上向き矢印が入ったアイコンを選びます。</p>
+              </div>
+            </div>
+            <div class="step-line relative flex gap-4 pb-1">
+              <span class="relative z-10 flex h-10 w-10 flex-none items-center justify-center rounded-full bg-primary font-bold text-white">2</span>
+              <div class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+                <h3 class="font-bold">共有方法を選ぶ</h3>
+                <p class="mt-2 text-sm leading-7 text-gray-600">「ウィンドウ」または「画面全体」から、状況に合う共有方法を選びます。</p>
+              </div>
+            </div>
+            <div class="step-line relative flex gap-4">
+              <span class="relative z-10 flex h-10 w-10 flex-none items-center justify-center rounded-full bg-primary font-bold text-white">3</span>
+              <div class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+                <h3 class="font-bold">共有する画面を選ぶ</h3>
+                <p class="mt-2 text-sm leading-7 text-gray-600">確認してほしいアプリのウィンドウ、または画面全体を選び、共有を開始します。</p>
+              </div>
+            </div>
+          </div>
+
+          <aside class="rounded-3xl bg-[#333333] p-6 text-white sm:p-8">
+            <span class="material-icons-outlined text-4xl text-primary-light" aria-hidden="true">shield</span>
+            <h3 class="mt-4 text-xl font-bold">共有前の30秒チェック</h3>
+            <ul class="mt-5 space-y-4 text-sm leading-7 text-white/90">
+              <li class="flex gap-3"><span class="material-icons-outlined mt-1 text-lg text-secondary-mid" aria-hidden="true">visibility_off</span><span>個人情報（氏名、メールアドレス、住所、決済情報）やAPIキーを映さない</span></li>
+              <li class="flex gap-3"><span class="material-icons-outlined mt-1 text-lg text-secondary-mid" aria-hidden="true">notifications_off</span><span>通知をオフにし、メール・カレンダー・個人用タブを閉じる</span></li>
+              <li class="flex gap-3"><span class="material-icons-outlined mt-1 text-lg text-secondary-mid" aria-hidden="true">desktop_windows</span><span>画面全体を共有する場合は、デスクトップや他のアプリも事前に確認する</span></li>
+              <li class="flex gap-3"><span class="material-icons-outlined mt-1 text-lg text-secondary-mid" aria-hidden="true">stop_screen_share</span><span>確認が終わったら、すぐに共有を停止する</span></li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2">
+          <figure class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+            <img src="assets/screen-share-button-public.png" alt="Google Meet画面下部の画面共有ボタンを赤枠と矢印で示した画像" width="1746" height="901" class="h-auto w-full" loading="lazy" decoding="async">
+            <figcaption class="border-t border-gray-100 px-5 py-3 text-sm font-medium leading-6">1. Meet画面下部の「画面を共有」ボタンを押します</figcaption>
+          </figure>
+          <figure class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+            <img src="assets/screen-share-window-public.png" alt="Google Meetの共有画面でウィンドウまたは画面全体を選択する例" width="1733" height="908" class="h-auto w-full" loading="lazy" decoding="async">
+            <figcaption class="border-t border-gray-100 px-5 py-3 text-sm font-medium leading-6">2. 「ウィンドウ」または「画面全体」から共有方法を選びます</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="microphone" class="scroll-mt-20 px-5 py-14 sm:py-20">
+      <div class="mx-auto max-w-5xl">
+        <span class="inline-block rounded-full bg-primary px-4 py-1 text-sm font-bold text-white">STEP 2</span>
+        <h2 class="mt-4 text-2xl font-bold sm:text-3xl">マイクを設定する</h2>
+        <p class="mt-3 max-w-2xl leading-7 text-gray-600">声が届かないときは、ブラウザの許可とMeetで選ばれている入力機器の両方を確認します。</p>
+
+        <div class="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2">
+          <article class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+            <div class="flex items-center gap-3">
+              <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary text-white"><span class="material-icons-outlined" aria-hidden="true">settings</span></span>
+              <h3 class="font-bold">1. ブラウザの許可を確認</h3>
+            </div>
+            <p class="mt-4 text-sm leading-7 text-gray-600">アドレスバー付近のサイト設定を開き、「マイク」が許可になっていることを確認します。</p>
+          </article>
+          <article class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+            <div class="flex items-center gap-3">
+              <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary text-white"><span class="material-icons-outlined" aria-hidden="true">mic</span></span>
+              <h3 class="font-bold">2. ミュートを解除</h3>
+            </div>
+            <p class="mt-4 text-sm leading-7 text-gray-600">Meet下部のマイクを確認し、赤いミュート状態なら解除します。</p>
+          </article>
+          <article class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+            <div class="flex items-center gap-3">
+              <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary text-white"><span class="material-icons-outlined" aria-hidden="true">arrow_drop_up</span></span>
+              <h3 class="font-bold">3. 使用するマイクを選ぶ</h3>
+            </div>
+            <p class="mt-4 text-sm leading-7 text-gray-600">マイク横のメニューから、内蔵マイクや接続中のイヤホンなど、実際に使う機器を選びます。</p>
+          </article>
+          <article class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+            <div class="flex items-center gap-3">
+              <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-secondary text-white"><span class="material-icons-outlined" aria-hidden="true">graphic_eq</span></span>
+              <h3 class="font-bold">4. 声が反応するか確認</h3>
+            </div>
+            <p class="mt-4 text-sm leading-7 text-gray-600">話したときに音声レベルが動くか、相手に一言確認してから始めます。</p>
+          </article>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2">
+          <figure class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+            <img src="assets/microphone-permission-public.png" alt="Chromeのサイト設定でGoogle Meetのマイク利用を許可する画面" width="1683" height="934" class="h-auto w-full" loading="lazy" decoding="async">
+            <figcaption class="border-t border-gray-100 px-5 py-3 text-sm font-medium leading-6">1. ブラウザでマイクの利用が許可されているか確認</figcaption>
+          </figure>
+          <figure class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+            <img src="assets/microphone-device-public.png" alt="Google Meetのマイクメニューから使用する入力機器を選ぶ画面" width="1738" height="905" class="h-auto w-full" loading="lazy" decoding="async">
+            <figcaption class="border-t border-gray-100 px-5 py-3 text-sm font-medium leading-6">2. マイク横のメニューから使用する入力機器を選択</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="question" class="scroll-mt-20 bg-secondary-light px-5 py-14 sm:py-20">
+      <div class="mx-auto max-w-5xl">
+        <div class="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+          <div>
+            <span class="inline-block rounded-full bg-primary px-4 py-1 text-sm font-bold text-white">STEP 3</span>
+            <h2 class="mt-4 text-2xl font-bold sm:text-3xl">質問は前日までに送信</h2>
+            <p class="mt-3 max-w-2xl leading-7 text-gray-600">画面共有とマイクの確認ができたら、最後に質問内容を前日までに送信してください。</p>
+          </div>
+          <span class="material-icons-outlined text-6xl text-secondary" aria-hidden="true">contact_support</span>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 gap-5 md:grid-cols-3">
+          <article class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-primary font-bold text-white">1</span>
+            <h3 class="mt-4 font-bold">案内投稿を開く</h3>
+            <p class="mt-2 text-sm leading-7 text-gray-600">Discordの「限定・お知らせ」から、最新のフォローアップ会案内を確認します。</p>
+          </article>
+          <article class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-primary font-bold text-white">2</span>
+            <h3 class="mt-4 font-bold">質問フォームへ進む</h3>
+            <p class="mt-2 text-sm leading-7 text-gray-600">案内投稿に記載されたフォームを開き、参加日と質問内容を入力します。</p>
+          </article>
+          <article class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-primary font-bold text-white">3</span>
+            <h3 class="mt-4 font-bold">前日までに送信</h3>
+            <p class="mt-2 text-sm leading-7 text-gray-600">エラー画面や止まった操作も書いておくと、当日の確認がスムーズです。</p>
+          </article>
+        </div>
+
+        <div class="mt-8 rounded-2xl border-2 border-primary-light bg-primary-lightest p-6">
+          <div class="flex items-start gap-4">
+            <span class="material-icons-outlined text-3xl text-primary" aria-hidden="true">description</span>
+            <div>
+              <h3 class="font-bold">質問フォームに書いておくとよいこと</h3>
+              <div class="mt-4 grid grid-cols-1 gap-3 text-sm sm:grid-cols-2">
+                <p class="flex gap-2"><span class="material-icons-outlined text-lg text-primary" aria-hidden="true">check</span><span>どの手順で止まったか</span></p>
+                <p class="flex gap-2"><span class="material-icons-outlined text-lg text-primary" aria-hidden="true">check</span><span>画面に表示されたエラー</span></p>
+                <p class="flex gap-2"><span class="material-icons-outlined text-lg text-primary" aria-hidden="true">check</span><span>自分で試したこと</span></p>
+                <p class="flex gap-2"><span class="material-icons-outlined text-lg text-primary" aria-hidden="true">check</span><span>最終的にできるようになりたいこと</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <figure class="mt-8 overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm">
+          <img src="assets/question-form-public.png" alt="Discordの限定・お知らせチャンネルに掲載されたフォローアップ会の案内と申込フォームの場所" width="1368" height="1149" class="h-auto w-full" loading="lazy" decoding="async">
+          <figcaption class="border-t border-gray-100 px-5 py-3 text-center text-xs leading-6 text-gray-500">Discordの「限定・お知らせ」から最新の案内を確認します。日時・URLは公開用に一般表記へ加工しています。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="px-5 py-14 sm:py-20">
+      <div class="mx-auto max-w-5xl">
+        <div class="text-center">
+          <p class="text-sm font-bold tracking-widest text-primary">CHECK LIST</p>
+          <h2 class="mt-2 text-2xl font-bold sm:text-3xl">参加前の最終チェック</h2>
+        </div>
+        <div class="mx-auto mt-10 grid max-w-3xl grid-cols-1 gap-4 sm:grid-cols-2">
+          <div class="flex items-center gap-3 rounded-xl border border-primary-light bg-primary-lightest p-5">
+            <span class="material-icons-outlined flex-none text-3xl text-primary" aria-hidden="true">task_alt</span>
+            <p class="text-sm font-bold">質問フォームを前日までに送信</p>
+          </div>
+          <div class="flex items-center gap-3 rounded-xl border border-primary-light bg-primary-lightest p-5">
+            <span class="material-icons-outlined flex-none text-3xl text-primary" aria-hidden="true">task_alt</span>
+            <p class="text-sm font-bold">止まっている画面を開いておく</p>
+          </div>
+          <div class="flex items-center gap-3 rounded-xl border border-primary-light bg-primary-lightest p-5">
+            <span class="material-icons-outlined flex-none text-3xl text-primary" aria-hidden="true">task_alt</span>
+            <p class="text-sm font-bold">当日までに画面共有を一度テスト</p>
+          </div>
+          <div class="flex items-center gap-3 rounded-xl border border-primary-light bg-primary-lightest p-5">
+            <span class="material-icons-outlined flex-none text-3xl text-primary" aria-hidden="true">task_alt</span>
+            <p class="text-sm font-bold">マイクの接続と許可を確認</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="shift-ai-gradient px-5 py-14 text-white">
+      <div class="mx-auto max-w-5xl text-center">
+        <span class="material-icons-outlined text-5xl" aria-hidden="true">rocket_launch</span>
+        <h2 class="mt-4 text-2xl font-bold sm:text-3xl">準備ができたら、安心してご参加ください</h2>
+        <p class="mx-auto mt-4 max-w-2xl leading-8 text-white/90">初期設定で止まるのは珍しいことではありません。現在の画面を見せながら、一つずつ解消していきましょう。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[#333333] px-5 py-8 text-white">
+    <div class="mx-auto flex max-w-5xl flex-col justify-between gap-3 text-sm sm:flex-row sm:items-center">
+      <p class="font-bold">SHIFT AI</p>
+      <p class="text-white/90">フォローアップ会 ──── 参加ガイド | 2026年8月</p>
+    </div>
+  </footer>
+</body>
+</html>
