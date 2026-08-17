@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="SHIFT AI フォローアップ会の目的、質問方法、Google Meetの画面共有・マイク設定をまとめた参加ガイドです。">
+  <meta name="description" content="SHIFT AI フォローアップ会の目的、Claude Code・Codexの初期設定、質問方法、Google Meetの画面共有・マイク設定をまとめた参加ガイドです。">
   <meta name="theme-color" content="#a51e6d">
   <title>フォローアップ会 参加ガイド | SHIFT AI</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -93,8 +93,8 @@
             <span class="material-icons-outlined text-lg" aria-hidden="true">handshake</span>
             少人数サポート
           </p>
-          <h1 class="text-3xl font-bold leading-tight sm:text-5xl sm:leading-tight">初期設定の「ここで止まった」を<br class="hidden sm:block">その場で一緒に解消します</h1>
-          <p class="mt-6 max-w-2xl text-base leading-8 text-white/90 sm:text-lg">Claude Codeのセットアップや配布スキルの導入など、最初のつまずきを解消するためのフォローアップ会です。</p>
+          <h1 class="text-3xl font-bold leading-tight sm:text-5xl sm:leading-tight">実践会に入る前の<br class="hidden sm:block">「わからない・進めない」を一緒に解消します</h1>
+          <p class="mt-6 max-w-2xl text-base leading-8 text-white/90 sm:text-lg">Claude Code・Codexのセットアップや配布スキルの導入、実践会の進め方など、最初のつまずきを解消するためのフォローアップ会です。</p>
         </div>
 
         <div class="mt-10 grid grid-cols-1 items-stretch gap-3 md:grid-cols-[1fr_auto_1fr_auto_1fr]">
@@ -124,12 +124,13 @@
         <div class="text-center">
           <p class="text-sm font-bold tracking-widest text-primary">ABOUT</p>
           <h2 class="mt-2 text-2xl font-bold sm:text-3xl">この会でサポートすること</h2>
-          <p class="mx-auto mt-4 max-w-2xl leading-7 text-gray-600">フォローアップ会は、初期設定を終えて学習をスタートできる状態をつくるための場です。</p>
+          <p class="mx-auto mt-4 max-w-3xl leading-7 text-gray-600">フォローアップ会は、実践会で何をしているのかが分からない、初期設定のつまずきを自分では解決できないという最初の状態を解消し、安心して講座を進められるようにする場です。</p>
         </div>
 
-        <figure class="mt-10 overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm">
+        <figure class="relative mt-10 overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm">
           <img src="assets/overview.png" alt="フォローアップサポート会。Claude Codeのセットアップをサポートします" width="1774" height="887" class="h-auto w-full" decoding="async">
-          <figcaption class="border-t border-gray-100 px-5 py-3 text-center text-xs leading-6 text-gray-500">フォローアップ会のご案内</figcaption>
+          <span class="absolute right-4 top-4 rounded-full bg-primary px-4 py-2 text-sm font-bold text-white shadow-lg sm:right-6 sm:top-6">Codexにも対応</span>
+          <figcaption class="border-t border-gray-100 px-5 py-3 text-center text-xs leading-6 text-gray-500">Claude Code・Codexの初期セットアップをサポートします</figcaption>
         </figure>
 
         <div class="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
@@ -139,9 +140,10 @@
               <div>
                 <h3 class="text-lg font-bold">フォローアップ会で扱うこと</h3>
                 <ul class="mt-4 space-y-3 text-sm leading-6">
-                  <li class="flex gap-2"><span class="material-icons-outlined mt-0.5 text-lg text-primary" aria-hidden="true">done</span><span>Claude Codeのセットアップ</span></li>
+                  <li class="flex gap-2"><span class="material-icons-outlined mt-0.5 text-lg text-primary" aria-hidden="true">done</span><span>Claude Code・Codexのセットアップ</span></li>
                   <li class="flex gap-2"><span class="material-icons-outlined mt-0.5 text-lg text-primary" aria-hidden="true">done</span><span>配布スキルの導入</span></li>
-                  <li class="flex gap-2"><span class="material-icons-outlined mt-0.5 text-lg text-primary" aria-hidden="true">done</span><span>初期設定で止まっている箇所の確認</span></li>
+                  <li class="flex gap-2"><span class="material-icons-outlined mt-0.5 text-lg text-primary" aria-hidden="true">done</span><span>実践会で行うこと・進め方の確認</span></li>
+                  <li class="flex gap-2"><span class="material-icons-outlined mt-0.5 text-lg text-primary" aria-hidden="true">done</span><span>初期設定で止まっている箇所の解消</span></li>
                 </ul>
               </div>
             </div>
@@ -151,8 +153,13 @@
             <div class="flex items-start gap-4">
               <span class="material-icons-outlined rounded-xl bg-[#333333] p-3 text-2xl text-white" aria-hidden="true">event_repeat</span>
               <div>
-                <h3 class="text-lg font-bold">毎週の技術的な質問</h3>
-                <p class="mt-4 text-sm leading-7 text-gray-700">課題を進める中で生まれた技術的な質問や、応用的な相談は、毎週のフィードバック会をご利用ください。</p>
+                <h3 class="text-lg font-bold">毎週の技術的な質問の例</h3>
+                <ul class="mt-4 space-y-3 text-sm leading-6 text-gray-700">
+                  <li class="flex gap-2"><span class="material-icons-outlined mt-0.5 text-lg" aria-hidden="true">arrow_right</span><span>GitHubの基本操作・扱い方</span></li>
+                  <li class="flex gap-2"><span class="material-icons-outlined mt-0.5 text-lg" aria-hidden="true">arrow_right</span><span>講座内容を実践する中で生まれた技術的な質問</span></li>
+                  <li class="flex gap-2"><span class="material-icons-outlined mt-0.5 text-lg" aria-hidden="true">arrow_right</span><span>課題を進めた後の応用的な相談</span></li>
+                </ul>
+                <p class="mt-4 text-sm leading-7 text-gray-700">これらは、毎週のフィードバック会をご利用ください。</p>
               </div>
             </div>
           </article>
@@ -395,7 +402,7 @@
       <div class="mx-auto max-w-5xl text-center">
         <span class="material-icons-outlined text-5xl" aria-hidden="true">rocket_launch</span>
         <h2 class="mt-4 text-2xl font-bold sm:text-3xl">準備ができたら、安心してご参加ください</h2>
-        <p class="mx-auto mt-4 max-w-2xl leading-8 text-white/90">初期設定で止まるのは珍しいことではありません。現在の画面を見せながら、一つずつ解消していきましょう。</p>
+        <p class="mx-auto mt-4 max-w-2xl leading-8 text-white/90">実践会で何をすればよいか分からない、Claude CodeやCodexの初期設定で止まっているという状態から、現在の画面を見せながら一つずつ解消していきましょう。</p>
       </div>
     </section>
   </main>
